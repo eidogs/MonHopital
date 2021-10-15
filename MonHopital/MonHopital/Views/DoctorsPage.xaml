@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MonHopital.Views.DoctorsPage"
+             xmlns:vm="clr-namespace:MonHopital.ViewModels"
+             Title="{ Binding Title }">
+
+    <ContentPage.BindingContext>
+        <vm:DoctorsViewModel />
+    </ContentPage.BindingContext>
+
+    <AbsoluteLayout>
+        <StackLayout AbsoluteLayout.LayoutBounds="0, 0, 1, 1" AbsoluteLayout.LayoutFlags="All">
+            <ListView HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" ItemsSource="{ Binding Doctors }">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ImageCell Text="{ Binding name }" ImageSource="{ Binding image }" />
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+        <ActivityIndicator
+            AbsoluteLayout.LayoutBounds="0, 0, 1, 1" 
+            AbsoluteLayout.LayoutFlags="HeightProportional, WidthProportional" 
+            HorizontalOptions="Center" VerticalOptions="Center"
+            IsVisible="{ Binding IsBusy }"
+            IsRunning="True" Color="{ StaticResource Primary }"/>
+    </AbsoluteLayout>
+</ContentPage>

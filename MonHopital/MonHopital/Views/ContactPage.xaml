@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+             x:Class="MonHopital.Views.ContactPage"
+             xmlns:vm="clr-namespace:MonHopital.ViewModels"
+             Title="{ Binding Title }">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <xct:InvertedBoolConverter x:Key="InvertedBoolConverter" />
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <ContentPage.BindingContext>
+        <vm:ContactViewModel />
+    </ContentPage.BindingContext>
+
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60" />
+            <RowDefinition Height="60" />
+            <RowDefinition Height="60" />
+            <RowDefinition Height="60" />
+            <RowDefinition Height="120" />
+            <RowDefinition Height="60" />
+            <RowDefinition Height="60" />
+        </Grid.RowDefinitions>
+        <Entry Grid.Row="0" Placeholder="Nom" Text="{ Binding Name }" Margin="0,10,0,0"/>
+        <Entry Grid.Row="1" Placeholder="Email" Keyboard="Email" Text="{ Binding Email }" />
+        <Entry Grid.Row="2" Placeholder="Numéro de Téléphone" Keyboard="Telephone" Text="{ Binding Number }" />
+        <Entry Grid.Row="3" Placeholder="Sujet" Text="{ Binding Subject }" />
+        <Editor Grid.Row="4" Placeholder="Message" Text="{ Binding Content }" />
+        <Button Grid.Row="5" Text="Envoyer" IsVisible="{ Binding IsBusy, Converter={StaticResource InvertedBoolConverter} }" 
+                Command="{ Binding SendMessageCommand }" Margin="5" />
+        <ActivityIndicator Grid.Row="5" IsVisible="{ Binding IsBusy }" IsRunning="{ Binding IsBusy }" Color="{ StaticResource Primary }" />
+        <Label Grid.Row="6" Text="Message non envoyé" IsVisible="{ Binding Error }" TextColor="{ StaticResource Primary }" HorizontalOptions="Center" VerticalOptions="Center" FontAttributes="Bold" />
+    </Grid>
+</ContentPage>

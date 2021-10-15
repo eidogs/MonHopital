@@ -100,7 +100,7 @@
 
     <FlyoutItem Title="Personnel">
         <FlyoutItem.Icon>
-            <FontImageSource FontFamily="Material" Color="Black" Glyph="&#xe850;" />
+            <FontImageSource FontFamily="Material" Color="Black" Glyph="&#xf233;" />
         </FlyoutItem.Icon>
         <ShellContent Route="DoctorsPage" ContentTemplate="{DataTemplate local:DoctorsPage}" />
     </FlyoutItem>

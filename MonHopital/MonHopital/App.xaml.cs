@@ -1,8 +1,4 @@
-﻿using MonHopital.Services;
-using MonHopital.Views;
-using System;
-using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
+﻿using Xamarin.Forms;
 
 namespace MonHopital
 {
@@ -12,8 +8,6 @@ namespace MonHopital
         public App()
         {
             InitializeComponent();
-
-            DependencyService.Register<MockDataStore>();
             MainPage = new AppShell();
         }
 

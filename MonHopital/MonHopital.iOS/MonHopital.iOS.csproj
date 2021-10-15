@@ -112,17 +112,6 @@
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon20.png">
       <Visible>false</Visible>
     </ImageAsset>
-    <BundleResource Include="Resources\contact%403x.png" />
-    <BundleResource Include="Resources\home%403x.png" />
-    <BundleResource Include="Resources\icon_about.png" />
-    <BundleResource Include="Resources\icon_about%402x.png" />
-    <BundleResource Include="Resources\icon_about%403x.png" />
-    <BundleResource Include="Resources\icon_feed.png" />
-    <BundleResource Include="Resources\icon_feed%402x.png" />
-    <BundleResource Include="Resources\icon_feed%403x.png" />
-    <BundleResource Include="Resources\personnel%403x.png" />
-    <BundleResource Include="Resources\services%403x.png" />
-    <BundleResource Include="Resources\specialist%403x.png" />
     <BundleResource Include="Resources\xamarin_logo.png" />
     <BundleResource Include="Resources\xamarin_logo%402x.png" />
     <BundleResource Include="Resources\xamarin_logo%403x.png" />
@@ -155,35 +144,5 @@
       <Project>{9CCE6C0B-B980-473D-B0B5-0DBE6D7FD2E0}</Project>
       <Name>MonHopital</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\contact.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\contact%402x.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\home.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\home%402x.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\personnel.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\personnel%402x.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\services.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\services%402x.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\specialist.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\specialist%402x.png" />
   </ItemGroup>
 </Project>
